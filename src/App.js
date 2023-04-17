@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React, { useState } from "react";
 
 function App() {
+  const [Counter, setCounter] = useState(1)
+  const Onclick = () => {
+    setCounter(prevCounter => prevCounter + 1)
+    alert(`You clicked this button ${Counter} times`);
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+      <div>
+        <header>
+          <img src="https://gazettereview.com/wp-content/uploads/2016/07/currency.jpg" alt="Currencies"></img>
+          <button type="button" onClick={Onclick}>&#128512;</button>
+        </header>
+      </div>
+    );
+  }
+
 
 export default App;
+
